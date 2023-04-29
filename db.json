@@ -1,0 +1,67 @@
+{
+  "cardapio": [
+    { 
+      "id": 1,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Lasanha à bolonhesa",
+      "descricao": "Massa de lasanha com molho à bolonhesa, queijo e presunto.",
+      "preco": 29.90
+    },
+    { 
+      "id": 2,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Salmão grelhado",
+      "descricao": "Filé de salmão grelhado com legumes na manteiga.",
+      "preco": 45
+    },
+    { 
+      "id": 3,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Feijoada completa",
+      "descricao": "Feijoada com arroz, couve, torresmo, linguiça e carne seca.",
+      "preco": 35.90
+    },
+    { 
+      "id": 4,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Hambúrguer vegetariano",
+      "descricao": "Hambúrguer vegetariano com pão integral, queijo, alface, tomate e molho especial.",
+      "preco": 19.90
+    },
+    { 
+      "id": 5,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Nhoque ao molho de tomate",
+      "descricao": "Nhoque de batata com molho de tomate, manjericão e queijo ralado.",
+      "preco": 27.50
+    },
+    { 
+      "id": 6,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Frango à parmegiana",
+      "descricao": "Filé de frango empanado com molho de tomate e queijo gratinado.",
+      "preco": 32
+    },
+    { 
+      "id": 7,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Bife acebolado",
+      "descricao": "Bife de carne bovina grelhado com cebola refogada.",
+      "preco": 28.50
+    },
+    { 
+      "id": 8,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Espaguete à carbonara",
+      "descricao": "Massa de espaguete com molho de ovos, bacon, queijo e pimenta preta.",
+      "preco": 34.90
+    },
+    { 
+      "id": 9,
+      "imagem": "https://via.placeholder.com/500x500",
+      "nome_prato": "Ceviche peruano",
+      "descricao": "Peixe branco marinado em limão, com pimenta, cebola e coentro.",
+      "preco": 42.00
+    }
+  ]
+}
