@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './core/layouts/main/main.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, MainComponent],
@@ -16,6 +18,8 @@ import { MainComponent } from './core/layouts/main/main.component';
     CoreModule,
     FeaturesModule,
     SharedModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
