@@ -21,7 +21,6 @@ export class HomeFacade {
       map((resposta) => resposta),
       catchError((erro) => this.notificarErro(erro))
       ).subscribe((cardapio: Cardapio[]) => {
-      console.log(cardapio)
       this.notificarSucesso(cardapio)
     });
   }
