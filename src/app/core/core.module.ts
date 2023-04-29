@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 
@@ -10,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     NavbarComponent,
     FooterComponent,
+    ButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ButtonComponent,
   ]
 })
 export class CoreModule { }
