@@ -18,6 +18,7 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
+        loadChildren: () => import('./features/features.module').then((m) => FeaturesModule),
       },
     ],
   },
