@@ -8,6 +8,10 @@ import { LoginComponent } from './login/container/login/login.component';
 @NgModule({
   declarations: [
     HomeComponent,
+    ReservaComponent,
+    ReservaHistoricoComponent
+    ReservaChatComponent,
+    ReservaListagemComponent,
     LoginComponent,
   ],
   imports: [
