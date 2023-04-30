@@ -14,6 +14,17 @@ interface Mensagem {
 })
 export class ReservaChatComponent {
 
+  public chatForm: FormGroup;
+    private fb: FormBuilder,
+  ngOnInit(): void {
+    this.iniciarForm()
+  }
+
+  private iniciarForm(){
+    this.chatForm = this.fb.group({
+      mensagem: ['', Validators.required],
+    });
+  }
 
   
 }
