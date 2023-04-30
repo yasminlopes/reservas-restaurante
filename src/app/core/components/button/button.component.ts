@@ -36,7 +36,7 @@ export class ButtonComponent implements ButtonInterface {
   }
 
   private primary(): string {
-    const classeBase = 'bg-yellow-500 text-white font-bold py-2 px-4 rounded' 
+    const classeBase = 'bg-yellow-500 text-yellow-900 font-bold py-2 px-4 rounded' 
     if (this.disabled) {
       return `${classeBase} disabled:cursor-not-allowed cursor-not-allowed opacity-50`
     } else {
