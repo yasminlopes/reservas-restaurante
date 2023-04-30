@@ -1,0 +1,42 @@
+<div class="p-6">
+  <h1 class="text-4xl font-bold text-gray-900 mb-4 text-center">Últimas Reservas</h1>
+  <div class="bg-black shadow-md rounded-md p-6">
+    <ng-container *ngIf="ultimasReservas && ultimasReservas.length > 0; else semReservas">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-md overflow-hidden" *ngFor="let reserva of ultimasReservas">
+          <img class="w-full h-40 object-cover"
+              src="https://source.unsplash.com/1000x600/?food,restaurant"
+              alt="Imagem da reserva">
+          <div class="p-4">
+            <h2 class="text-lg font-medium text-gray-900 mb-2">#{{ reserva.id_reserva }}</h2>
+            <p class="text-gray-700 text-sm">
+              Data {{ reserva.dia_reserva }} às {{ reserva.hora_reserva }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <app-button
+          [label]="'Fazer outra reserva'"
+          [style]="'primary'"
+          (onClick)="onFazerOutraReserva.emit()"
+        ></app-button>
+      </div>
+    </ng-container>
+    <ng-template #semReservas>
+      <div class="flex justify-center">
+        <div class="px-6 py-4 whitespace-nowrap text-xl font-medium text-gray-500 text-center">
+          Nenhum histórico de reserva para exibir.
+          <br>
+          Faça sua reserva agora!
+          <br>
+          <app-button
+          [label]="'Fazer uma reserva'"
+          [style]="'primary'"
+          (onClick)="onFazerOutraReserva.emit()"
+        ></app-button>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
