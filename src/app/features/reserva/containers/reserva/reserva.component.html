@@ -1,0 +1,8 @@
+<app-reserva-historico
+  [ultimasReservas]="facade.ultimasReservas$ | async"
+  (onFazerOutraReserva)="facade.navegarParaCriarReserva()"/>
+
+<app-reserva-listagem
+  [colunasListagem]="colunasListagem"
+  [reservas]="facade.reservasCliente$ | async"
+  (onDetalhes)="facade.mostrarDetalhes($event)"/>
