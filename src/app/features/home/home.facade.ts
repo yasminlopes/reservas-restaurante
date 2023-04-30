@@ -21,13 +21,8 @@ export class HomeFacade {
       map((resposta) => resposta),
       catchError((erro) => this.notificarErro(erro))
       ).subscribe((cardapio: Cardapio[]) => {
-      this.notificarSucesso(cardapio)
+        this.state.cardapio.next(cardapio)
     });
-  }
-
-  private notificarSucesso(cardapio: Cardapio[]): void {
-    this.state.cardapio.next(cardapio);
-    this.toastr.success('Lista de cardápio carregada com sucesso.');
   }
   
   private notificarErro(erro: any): Observable<never> {
