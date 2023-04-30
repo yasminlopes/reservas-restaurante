@@ -17,8 +17,8 @@ export class ReservaChatComponent {
   public chatForm: FormGroup;
   public mensagens: Mensagem[] = [];
 
-    private fb: FormBuilder,
-    private openAiService: OpenAiService
+  constructor(private fb: FormBuilder, private openAiService: OpenAiService) {}
+
   ngOnInit(): void {
     this.iniciarForm()
     this.mensagemInicial()
