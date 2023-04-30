@@ -4,6 +4,7 @@ import { MainComponent } from './core/layouts/main/main.component';
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 import { HomeComponent } from './features/home/containers/home/home.component';
+import { LoginComponent } from './features/login/container/login/login.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 
