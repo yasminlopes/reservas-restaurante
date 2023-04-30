@@ -29,5 +29,9 @@ export class ReservaChatComponent {
   private adicionarMsgAoHistorico(conteudoMensagem: string, chatBot: boolean): void {
     this.mensagens.push({ conteudoMensagem, chatBot })
   }
+
+  private limparCampoMsg(): void {
+    this.chatForm.controls['message'].setValue('')
+  }  
   
 }
