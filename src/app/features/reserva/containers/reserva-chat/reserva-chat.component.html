@@ -1,0 +1,28 @@
+<div class="w-full h-screen flex flex-col bg-gray-800">
+
+  <div class="bg-gray-950 flex items-center p-4">
+    <img src="assets/img/avatar.png" class="w-12 h-12 rounded-full mr-4">
+    <h2 class="text-white font-bold text-lg">Assistente Virtual</h2>
+  </div>
+
+  <div class="flex-1 overflow-y-auto">
+    <div *ngFor="let mensagem of mensagens" class="my-2">
+      <div [class]="mensagem.chatBot ? 'flex justify-start' : 'flex justify-end'" role="listitem">
+        <div [class]="mensagem.chatBot ? 'ml-4 bg-gray-200 rounded-lg px-4 py-2 max-w-md' : 'bg-yellow-400 text-yellow-900 rounded-lg px-4 py-2 max-w-md'" role="dialog">
+          {{ mensagem.conteudoMensagem }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white p-4">
+    <form [formGroup]="chatForm" (ngSubmit)="enviarMensagem()" class="flex" role="form">
+      <label for="mensagem" class="sr-only">Digite sua mensagem...</label>
+      <input formControlName="mensagem" type="text" class="flex-1 rounded-md  border-gray-300 focus:outline-none focus:ring focus:border-blue-300" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem..." />
+      <app-button [label]="'Enviar'" [style]="'primary'" [disabled]="chatForm.invalid"/>
+    </form>
+  </div>
+
+</div>
+
+
