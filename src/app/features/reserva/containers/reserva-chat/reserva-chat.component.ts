@@ -18,6 +18,7 @@ export class ReservaChatComponent {
     private fb: FormBuilder,
   ngOnInit(): void {
     this.iniciarForm()
+    this.mensagemInicial()
   }
 
   private iniciarForm(){
@@ -43,5 +44,19 @@ export class ReservaChatComponent {
   private limparCampoMsg(): void {
     this.chatForm.controls['message'].setValue('')
   }  
+
+  private chatBotMsg(conteudoMensagem: string): void {
+    this.mensagens.push({ conteudoMensagem, chatBot: true })
+  }
+
+  private async mensagemInicial() {
+    await this.chatBotMsg('Olá! Sou o assistente virtual do Code & Cook e ficarei feliz em ajudá-lo a fazer sua reserva.')
+    
+    const delay = 2000
+    await new Promise(resolve => setTimeout(resolve, delay))
+    
+    await this.chatBotMsg('Para que possa personalizar minha assistência, posso saber seu nome, por favor?')
+  }
+  
   
 }
