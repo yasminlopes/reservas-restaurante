@@ -13,3 +13,9 @@ export class ReservaConcluida {
   ) {}
 }
 
+export class ItensConsumidos {
+  constructor(
+    public nome_prato: string,
+    public preco: number,
+  ) {}
+}
