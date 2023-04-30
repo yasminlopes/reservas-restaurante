@@ -26,5 +26,8 @@ export class ReservaChatComponent {
     });
   }
 
+  private adicionarMsgAoHistorico(conteudoMensagem: string, chatBot: boolean): void {
+    this.mensagens.push({ conteudoMensagem, chatBot })
+  }
   
 }
