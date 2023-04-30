@@ -26,6 +26,16 @@ export class ReservaChatComponent {
     });
   }
 
+  public async enviarMensagem(): Promise<void> {
+    const conteudoMensagemUsuario = this.chatForm.controls['mensagem'].value;
+    this.adicionarMsgAoHistorico(conteudoMensagemUsuario, false)
+
+    const chatBotMsg = await this.openAiService.enviarMensagem(conteudoMensagemUsuario)
+    this.adicionarMsgAoHistorico(chatBotMsg, true)
+
+    this.limparCampoMsg()
+  }
+
   private adicionarMsgAoHistorico(conteudoMensagem: string, chatBot: boolean): void {
     this.mensagens.push({ conteudoMensagem, chatBot })
   }
